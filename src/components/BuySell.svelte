@@ -2,9 +2,7 @@
   let rotationDegree = "-50deg";
   let isbuy = false;
 
-
-
-  function selectDegrees(isbuy) {
+  function setDegrees(isbuy) {
     if (isbuy) {
       rotationDegree = "50deg";
     } else {
@@ -12,14 +10,16 @@
     }
   }
 
-function setIsBuy(somedata) {
-    if(somedata == true)  {
-        //  then set isbuy to true
-    }else {
-        //  then set isbuy to false
+  function setIsBuy(somedata) {
+    if (somedata == true) {
+      //  then set isbuy to true
+      isbuy = true;
+      setDegrees(isbuy);
+    } else {
+      //  then set isbuy to false
+      isbuy = false;
     }
-}
-
+  }
 </script>
 
 <div id="container">
@@ -27,7 +27,9 @@ function setIsBuy(somedata) {
     <div id="roundtop">
       <div id="anchorsquare">
         <div id="arrowcontainer" style="--rotate:{rotationDegree}">
-          <div id="arrow"></div>
+          <div id="arrow">
+            <div id="arrowhead"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,7 +38,7 @@ function setIsBuy(somedata) {
   <div id="divme"></div>
   <div id="divme"></div>
   <div id="divme"></div>
-  <button>click me to change the odds</button>
+  <button on:click={() => setIsBuy(true)}>click me to change the odds</button>
 </div>
 
 <style>
@@ -55,34 +57,45 @@ function setIsBuy(somedata) {
   #roundtop {
     width: 300px;
     height: 150px;
-    background-color: red;
+    background-color: rgb(63, 114, 209);
     border-radius: 10rem 10rem 0 0;
   }
   #anchorsquare {
-    width: 25px;
-    height: 25px;
-    background-color: rgb(204, 75, 255);
+    width: 35px;
+    height: 35px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem 1rem 0 0;
     position: relative;
     bottom: 300px;
-    top: 83.5%;
+    top: 76.2%;
     right: -50%;
     transform: translateX(-50%);
   }
   #arrowcontainer {
     position: relative;
     bottom: 6rem;
-    background-color: green;
     display: flex;
     justify-content: center;
     /* SWITCH ROTATION HERE */
     rotate: var(--rotate);
     transform-origin: bottom;
+    transform: translateY(10%);
+    transition: 400ms linear all;
   }
   #arrow {
     width: 10px;
     height: 7rem;
-    background-color: chocolate;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+  }
+  #arrowhead {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid red;
     position: relative;
-    transform: rotate(0.5turn);
+    left: -10px;
+    bottom: 20px;
   }
 </style>
