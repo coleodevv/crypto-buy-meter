@@ -1,5 +1,5 @@
 <script>
-  let rotationDegree = "-50deg";
+  let rotationDegree = "0deg";
   let isbuy = false;
 
   function setDegrees(isbuy) {
@@ -22,7 +22,7 @@
   }
 </script>
 
-<div id="container">
+<div id="rootcontainer">
   <div id="divme">
     <div id="roundtop">
       <div id="anchorsquare">
@@ -35,29 +35,34 @@
     </div>
     <div id="bottomline"></div>
   </div>
-  <div id="divme"></div>
-  <div id="divme"></div>
-  <div id="divme"></div>
-  <button on:click={() => setIsBuy(true)}>click me to change the odds</button>
+  <div id="divme">
+    <h1>NEUTRAL</h1>
+  </div>
+  <div id="divme">
+    <input placeholder="stock symbol here ex. AAPL" oninput="let p = this.selectionStart; this.value = this.value.toUpperCase();this.setSelectionRange(p, p);" type="text" id="userstockinput" />
+  </div>
+  <div id="divme">
+    <button id="submitbutton" on:click={() => setIsBuy(true)}>SUBMIT</button>
+  </div>
 </div>
 
 <style>
-  #container {
-    height: 400px;
-    width: 500px;
-    border: 10px;
+  #rootcontainer {
     border-style: solid;
-    border-color: rgb(49, 255, 49);
+    border-radius: 2rem;
+    background-color: rgb(102, 102, 102);
   }
   #divme {
-    /* border-style: solid; */
-    border-color: rgb(49, 255, 49);
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
   }
-
   #roundtop {
     width: 300px;
     height: 150px;
-    background-color: rgb(63, 114, 209);
+    background-color: rgb(216, 216, 216);
     border-radius: 10rem 10rem 0 0;
   }
   #anchorsquare {
@@ -93,9 +98,22 @@
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 25px solid red;
+    border-bottom: 25px solid rgb(61, 155, 24);
     position: relative;
     left: -10px;
     bottom: 20px;
   }
+
+  #userstockinput {
+    width: 50%;
+    padding: 1rem;
+  }
+  #submitbutton {
+    width: 62%;
+    padding: 1rem;
+  }
+  #userstockinput
+{
+    font-size:12px;
+}
 </style>
