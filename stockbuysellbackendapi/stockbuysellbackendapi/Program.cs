@@ -20,8 +20,16 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseEndpoints(endpoionts =>
+{
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+/*This is setting the defaults to our controller class*/
+    /*1st part is the controller name*/
+    /*2nd part is the method name it defaults too if not passed in the url*/
+    /*3rd part is the aurgument the user provides if there are paramaters*/
+    pattern: "{controller=Home}/{action=}/{id?}");
+});
+
 
 app.Run();
