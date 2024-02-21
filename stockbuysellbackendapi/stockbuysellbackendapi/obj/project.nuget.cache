@@ -1,16 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O5PVAqkQWpb+rxUQGFcpIhsxg0SRwhNnebqxUrcOvFJ9pIwFvCrL55exMlt5zkWGSplrM83h/IDHLRK+JhuNJA==",
+  "dgSpecHash": "Z8ICfgaZ7a3Tw9uEAlV8Iupkin5UGZmWiWo6CkXCzww4yUIM9Efl8YcC2vdegISlEGNtqTiV5Dcbfcti9DLpmw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\stockbuysellbackendapi.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Coleson\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
-    "C:\\Users\\Coleson\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\Coleson\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
-    "C:\\Users\\Coleson\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
-    "C:\\Users\\Coleson\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
-    "C:\\Users\\Coleson\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
-    "C:\\Users\\Coleson\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
