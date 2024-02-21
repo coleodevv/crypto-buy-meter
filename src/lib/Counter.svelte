@@ -14,6 +14,7 @@
   count is {count}
 </button>
 
+
 <!-- This section is where the change occurs -->
 <div style="--fuck: {userInputColor}">
   <p>this text is gonna change color</p>

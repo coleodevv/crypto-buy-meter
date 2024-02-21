@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackend\\stockbuysellbackend\\stockbuysellbackend.csproj": {}
+    "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\stockbuysellbackendapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackend\\stockbuysellbackend\\stockbuysellbackend.csproj": {
+    "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\stockbuysellbackendapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackend\\stockbuysellbackend\\stockbuysellbackend.csproj",
-        "projectName": "stockbuysellbackend",
-        "projectPath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackend\\stockbuysellbackend\\stockbuysellbackend.csproj",
+        "projectUniqueName": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\stockbuysellbackendapi.csproj",
+        "projectName": "stockbuysellbackendapi",
+        "projectPath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\stockbuysellbackendapi.csproj",
         "packagesPath": "C:\\Users\\Coleson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackend\\stockbuysellbackend\\obj\\",
+        "outputPath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Coleson\\AppData\\Roaming\\NuGet\\NuGet.Config"

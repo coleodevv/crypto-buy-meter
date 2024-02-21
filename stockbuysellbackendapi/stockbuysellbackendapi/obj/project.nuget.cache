@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t38j3i8U/rcUcCxQ4wh361LdqTjzGxoMYt6pJGEdAMHGqQP9SQqWYHce89SlHkgL01ItHAFp7RGUwSuINblUqg==",
+  "dgSpecHash": "O5PVAqkQWpb+rxUQGFcpIhsxg0SRwhNnebqxUrcOvFJ9pIwFvCrL55exMlt5zkWGSplrM83h/IDHLRK+JhuNJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackend\\stockbuysellbackend\\stockbuysellbackend.csproj",
+  "projectFilePath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\stockbuysellbackendapi\\stockbuysellbackendapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Coleson\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\Coleson\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

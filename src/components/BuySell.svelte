@@ -1,6 +1,9 @@
 <script>
+  import { onMount } from "svelte";
+
   let rotationDegree = "0deg";
   let isbuy = false;
+  let buyOrSell = "choose a ticker";
 
   function setDegrees(isbuy) {
     if (isbuy) {
@@ -15,11 +18,20 @@
       //  then set isbuy to true
       isbuy = true;
       setDegrees(isbuy);
+      buyOrSell = "buy";
     } else {
       //  then set isbuy to false
       isbuy = false;
+      buyOrSell = "sell";
     }
   }
+
+  let myInput;
+  let myDiv;
+  onMount(() => {
+    console.dir(myDiv);
+    console.dir(myInput);
+  });
 </script>
 
 <div id="rootcontainer">
@@ -36,10 +48,16 @@
     <div id="bottomline"></div>
   </div>
   <div id="divme">
-    <h1>NEUTRAL</h1>
+    <h1>{buyOrSell}</h1>
   </div>
-  <div id="divme">
-    <input placeholder="stock symbol here ex. AAPL" oninput="let p = this.selectionStart; this.value = this.value.toUpperCase();this.setSelectionRange(p, p);" type="text" id="userstockinput" />
+  <div bind:this={myDiv} id="divme">
+    <input
+      bind:this={myInput}
+      placeholder="stock symbol here ex. AAPL"
+      oninput="this.value = this.value.toUpperCase();"
+      type="text"
+      id="userstockinput"
+    />
   </div>
   <div id="divme">
     <button id="submitbutton" on:click={() => setIsBuy(true)}>SUBMIT</button>
@@ -112,8 +130,7 @@
     width: 62%;
     padding: 1rem;
   }
-  #userstockinput
-{
-    font-size:12px;
-}
+  #userstockinput {
+    font-size: 12px;
+  }
 </style>
