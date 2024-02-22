@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\stockbuysellbackendapi.props" />
+</Project>
