@@ -13,22 +13,26 @@ namespace AccountOwnerServer.Controllers
 
         public StockDataController()
         {
+/*its really that simple dp inject is really just getting an external context and injecting it on instantantion*/
             _httpClient = new HttpClient();
         }
 
         [HttpGet]
-        [Route("crazyfood/{ticker}")]
-        [Route("ticker/{ticker}")]
-        public async Task<string> GetTicker(string ticker)
+        [Route("GetTicker/{ticker}/{country}")]
+        public async Task<string> GetTicker(string ticker, string country)
         {
-            string testUrl = $"This is the test url ticker {ticker}";
-            return testUrl;
-            string Url = $"insert endpoint here {ticker}";
-            var response = await _httpClient.GetAsync(Url);
+
+            string url = $"https://api.agify.io?name={ticker}&country_id={country}";
+            var response = await _httpClient.GetAsync(url);
+            Response.Headers.Add("Food","Pizza");
+            var code = Response.StatusCode;
+            Response.Headers.Add("fuckingawesomestatuscode",$"{code}");
+
+
             return await response.Content.ReadAsStringAsync();
         }
 
-        
+
         /*you must include both the route and the http method otherwise it will thow an exeption*/
         [HttpGet]
         [Route("hello")]
