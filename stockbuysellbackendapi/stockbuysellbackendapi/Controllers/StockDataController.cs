@@ -8,8 +8,8 @@ namespace AccountOwnerServer.Controllers
     [Route("api/stockdata")]
     public class StockDataController : ControllerBase
     {
-
         private static HttpClient _httpClient;
+
         public StockDataController()
         {
 /*its really that simple dp inject is really just getting an external context and injecting it on instantantion*/
@@ -25,6 +25,11 @@ namespace AccountOwnerServer.Controllers
             return await response.Content.ReadAsStringAsync();
         }
 
+        /*so really the action here is just sending this data back to the client and they can recieve and parse it as they please*/
 
+        public ActionResult<string> TestThis()
+        {
+            return "This is a test of the emergency broadcast system";
+        }
     }
 }
