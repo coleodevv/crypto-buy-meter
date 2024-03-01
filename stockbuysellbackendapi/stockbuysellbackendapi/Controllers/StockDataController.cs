@@ -17,7 +17,7 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpGet]
-        [Route("ticker/{ticker}")]
+        [Route("tickers/{ticker}")]
         public async Task<string> GetTicker(string ticker)
         {
             string url = $"https://api.agify.io?name={ticker}";
