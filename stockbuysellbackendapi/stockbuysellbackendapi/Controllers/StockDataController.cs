@@ -19,13 +19,23 @@ namespace AccountOwnerServer.Controllers
 
         [HttpGet]
         [Route("stockdata/{ticker}")]
-        public async Task<string> GetTicker(string ticker)
+ public async Task<string> GetTicker(string ticker)
         {
             string uri = $"https://api.agify.io?name={ticker}";
+            /*Here are all the async methods*/
             var response = await _httpClient.GetAsync(uri);
+            /*
+            var response = await _httpClient.DeleteAsync();
+            var response = await _httpClient.PostAsync();
+            var response = await _httpClient.PutAsync();
+            */
             var result = response.Content.ReadAsStringAsync();
+            var headers = response.Headers;
+            Log.Information("The headers of this task object that was sent back from the server is :\t {@headers}", headers);
+            Log.Information("The content contained within this task object is none other than!!! :\t {@result}", result);
             return await response.Content.ReadAsStringAsync();
         }
+
 
         /*so really the action here is just sending this data back to the client and they can recieve and parse it as they please*/
 
