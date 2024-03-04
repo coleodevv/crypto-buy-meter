@@ -25,3 +25,15 @@ C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockb
 C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\obj\Debug\net8.0\stockbuysellbackendapi.pdb
 C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\obj\Debug\net8.0\stockbuysellbackendapi.genruntimeconfig.cache
 C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\obj\Debug\net8.0\ref\stockbuysellbackendapi.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\obj\Debug\net8.0\stockbuysellbackendapi.csproj.AssemblyReference.cache
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\obj\Debug\net8.0\stockbuysellbackendapi.csproj.CopyComplete
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Sinks.File.dll

@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
+using Serilog;
 
 namespace AccountOwnerServer.Controllers
 {
     [ApiController]
     /*This is the master controller route aka the source to acess this controller if a client types in api/Myass they will get the stockdatacontorller and then we can select what method action we want*/
-    [Route("api/stockdata")]
+    [Route("api")]
     public class StockDataController : ControllerBase
     {
         private static HttpClient _httpClient;
@@ -17,11 +18,12 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpGet]
-        [Route("tickers/{ticker}")]
+        [Route("stockdata/{ticker}")]
         public async Task<string> GetTicker(string ticker)
         {
-            string url = $"https://api.agify.io?name={ticker}";
-            var response = await _httpClient.GetAsync(url);
+            string uri = $"https://api.agify.io?name={ticker}";
+            var response = await _httpClient.GetAsync(uri);
+            var result = response.Content.ReadAsStringAsync();
             return await response.Content.ReadAsStringAsync();
         }
 

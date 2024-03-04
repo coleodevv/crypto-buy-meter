@@ -5,6 +5,7 @@ using stockbuysellbackendapi.Models;
 
 namespace stockbuysellbackendapi.Controllers;
 
+
 public class HomeController : Controller
 {
     public ActionResult<string> HomePage()
