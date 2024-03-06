@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("stockbuysellbackendapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a48035f97215d97a9c0729a91d88db3470f0cce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57ca972c655c29b40805d87b3a3d215abecea7a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("stockbuysellbackendapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("stockbuysellbackendapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

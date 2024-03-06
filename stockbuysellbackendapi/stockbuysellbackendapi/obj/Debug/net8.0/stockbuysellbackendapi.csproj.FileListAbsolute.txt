@@ -37,3 +37,7 @@ C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockb
 C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
 C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Alpaca.Markets.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Polly.dll
+C:\Users\Coleson\Desktop\stockbuysell\stockbuysell\stockbuysellbackendapi\stockbuysellbackendapi\bin\Debug\net8.0\Polly.Core.dll

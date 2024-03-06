@@ -27,7 +27,7 @@ try
     {
         // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
         app.UseHsts();
-        throw new Exception("The app host enviorment name is not DEVELOPMENT");
+        throw new Exception("Throwing an exception is different than catching an exception");
     }
 
     app.UseHttpsRedirection();
