@@ -17,6 +17,11 @@ public class AccountDataController : ControllerBase
         KeyVault keyVault = new KeyVault(password);
         string keyId = keyVault.GetKeyId();
         string secretKey = keyVault.GetSecretKey();
+        if (keyId == null | secretKey == null)
+        {
+            return "One or both of your keys returned null";
+        }
+
 
         Log.Information("Here are your key values:\n KeyId: {id} \n SecretKey: {secretkey} ", keyId, secretKey);
 
@@ -25,5 +30,17 @@ public class AccountDataController : ControllerBase
 
 
         return "The total current buying power in your account is:\t" + account.BuyingPower;
+    }
+}
+
+public class NewAutherColeodevv
+{
+    int time = 100;
+    private string name = "cole";
+    private string last = "olson";
+    
+
+    public void CreateFun(){
+    Console.WriteLine("This is gonna be super fun");
     }
 }
