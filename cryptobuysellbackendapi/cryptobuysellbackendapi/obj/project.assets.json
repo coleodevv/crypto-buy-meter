@@ -1555,11 +1555,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
+      "projectUniqueName": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
       "projectName": "cryptobuysellbackendapi",
-      "projectPath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
+      "projectPath": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
       "packagesPath": "C:\\Users\\Coleson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Coleson\\Desktop\\stockbuysell\\stockbuysell\\stockbuysellbackendapi\\cryptobuysellbackendapi\\obj\\",
+      "outputPath": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Coleson\\AppData\\Roaming\\NuGet\\NuGet.Config"
