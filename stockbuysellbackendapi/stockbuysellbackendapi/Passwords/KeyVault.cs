@@ -2,15 +2,18 @@
 
 public class KeyVault
 {
-    private readonly string _keyId = "PKXPZPQW6UMFM8IEHR4H";
-    private readonly string _secretKey = "xXeHB4BfZkH5TvruJKPxTnuVR5YbI7m0tUINy3BN";
+    /*key ids are what tell the server who you are*/
+    private readonly string _keyId = "PKNOC5ZJAKBF2D9WTCED";
+    /*secrete keys are the acatual password once the server knows who you are*/
+    private readonly string _secretKey = "g1rOz49BfGp7uYgk56cbZrQ30HPfwHwYYJblfV9A";
     private string _secretPassword { get; }
-    private string _secretPasswordAnswer = "crazyhardpassword";
+    private string _secretPasswordAnswer = "kittycat1234";
 
     public KeyVault(string secretPassword)
     {
         _secretPassword = secretPassword;
     }
+
     public string? GetKeyId()
     {
         if (_secretPassword == _secretPasswordAnswer)
