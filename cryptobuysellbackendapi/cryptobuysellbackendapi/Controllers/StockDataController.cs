@@ -44,7 +44,6 @@ namespace AccountOwnerServer.Controllers
 
             return response.Content;
 
-
             /*
             var options = new RestClientOptions("https://paper-api.alpaca.markets/v2/assets/BTCUSD");
             var client = new RestClient(options);

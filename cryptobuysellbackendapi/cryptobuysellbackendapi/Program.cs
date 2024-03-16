@@ -2,12 +2,12 @@ using System.Diagnostics;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
 
-     Log.Logger = new LoggerConfiguration()
+Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(theme: ConsoleTheme.None)
     .CreateLogger();
 
 
-     string turtlesInTime = "LETS KICK SHELL COWABUNGA!";
+string turtlesInTime = "LETS KICK SHELL COWABUNGA!";
 
 try
 {
@@ -26,6 +26,7 @@ try
     if (!app.Environment.IsDevelopment())
     {
         // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+        /*hsts was created to force your request to a website to use https instead of http otherwise somone could steal your packets on the first attempt of loggin in etc*/
         app.UseHsts();
         throw new Exception("Throwing an exception is different than catching an exception");
     }
@@ -34,14 +35,17 @@ try
     app.UseStaticFiles();
     app.UseAuthorization();
 
-/*Every app has a route builder and this just populates the defualt route when visiting the default base uri*/
+    /*use routing is a setup function that routes icnoming uri to the best matching controller*/
     app.UseRouting();
-/*as far as i am concerned this just sets a defaul route as middleware when the app instance gets initialized*/
+
+    /*this is just a cheasy way to create hard coded routes into our app at creation */
+    app.MapGet("/", () => "Hello welcome to my cool homepage of the app i am building");
+
+    /*lesson learned THIS HAS TO BE in the startup file otherwise the routes will not work!*/
     app.MapControllerRoute(
         name: "Home",
         pattern: "{controller=Home}/{action=HomePage}/{id?}"
     );
-
     app.Run();
 }
 
