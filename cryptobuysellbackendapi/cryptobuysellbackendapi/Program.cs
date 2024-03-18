@@ -20,6 +20,19 @@ try
     builder.Services.AddControllers();
 
 
+//CORS-----------------------------
+    var specificOrgins = "AppOrigins";
+
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy(name: specificOrgins,
+                          policy =>
+                          {
+                              policy.WithOrigins("http://localhost:5174");
+                          });
+    });
+   //CORS-----------------------------
+
     var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,6 +50,9 @@ try
 
     /*use routing is a setup function that routes icnoming uri to the best matching controller*/
     app.UseRouting();
+
+    /*allows our local host to acess itself from a different port*/
+    app.UseCors(specificOrgins);
 
     /*this is just a cheasy way to create hard coded routes into our app at creation */
     app.MapGet("/", () => "Hello welcome to my cool homepage of the app i am building");

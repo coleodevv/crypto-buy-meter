@@ -1,9 +1,11 @@
 <script>
   import { onMount } from "svelte";
+  import FetchDataStore from "./FetchDataStore.svelte";
 
   let rotationDegree = "0deg";
   let isbuy = false;
   let buyOrSell = "choose a ticker";
+  let dataStore;
 
   function setDegrees(isbuy) {
     if (isbuy) {
@@ -31,8 +33,11 @@
   onMount(() => {
     console.dir(myDiv);
     console.dir(myInput);
+    dataStore.getMovingAverage();
   });
 </script>
+
+<FetchDataStore bind:this={dataStore} />
 
 <div id="rootcontainer">
   <div id="divme">
@@ -55,6 +60,7 @@
       bind:this={myInput}
       placeholder="stock symbol here ex. AAPL"
       oninput="this.value = this.value.toUpperCase();"
+      onchange="this.translate = true"
       type="text"
       id="userstockinput"
     />
