@@ -28,7 +28,7 @@ try
         options.AddPolicy(name: specificOrgins,
                           policy =>
                           {
-                              policy.WithOrigins("http://localhost:5174");
+                              policy.WithOrigins("http://localhost:5175");
                           });
     });
    //CORS-----------------------------

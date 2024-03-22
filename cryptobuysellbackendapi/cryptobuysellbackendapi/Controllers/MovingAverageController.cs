@@ -61,7 +61,7 @@ public class MovingAverageController : ControllerBase
         /*let the client know that the format for entering a symbol is  SYMBOLUSD  they must tack usd on the end*/
         string symbolToUpper = symbol.ToUpper();
         Log.Information($"The value of to upper is : {symbolToUpper}");
-        string uri = $"https://api.polygon.io/v1/indicators/sma/X:{symbolToUpper}?timestamp=2024-03-15&timespan=day&window=100&series_type=close&order=asc&apiKey={keyId}";
+        string uri = $"https://api.polygon.io/v1/indicators/sma/X:{symbolToUpper}USD?timestamp=2024-03-15&timespan=day&window=100&series_type=close&order=asc&apiKey={keyId}";
         var result = await httpClient.GetAsync(uri);
         string content = await result.Content.ReadAsStringAsync();
 

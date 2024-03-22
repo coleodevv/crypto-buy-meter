@@ -1,20 +1,26 @@
 <!-- store to fetch all the application data -->
 <script>
-  export async function getMovingAverage() {
+  export async function getMovingAverage(coin) {
     try {
-      let uri = "http://localhost:5206/api/sma/btcusd";
+      let uri = `http://localhost:5206/api/sma/${coin}`;
       const promiseResult = await fetch(uri);
       const jsObject = await promiseResult.json();
-      console.log(jsObject);
+      return jsObject;
     } catch (error) {
         console.log("Unable to fetch:", error);
     }
   }
 
-  export function sayHello() {
-    console.log("Hello");
+  export async function getPrice(coin) {
+    try {
+      let uri = `http://localhost:5206/api/symbolinfo/${coin}`;
+      const promiseResult = await fetch(uri);
+      const jsObject = await promiseResult.json();
+      return jsObject;
+    } catch (error) {
+        console.log("Unable to fetch:", error);
+    }
   }
+
 </script>
 
-<button on:click={()=>getMovingAverage()}>Fetch data</button>
-<button on:click={()=>sayHello()}>Say hello</button>

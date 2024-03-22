@@ -4,40 +4,72 @@
 
   let rotationDegree = "0deg";
   let isbuy = false;
-  let buyOrSell = "choose a ticker";
-  let dataStore;
+  let buyOrSell = "Choose Crypto Ticker";
+  let fetchDataStore;
+  let closePrice;
+  let sma100days;
+  let inputCoinString;
 
-  function setDegrees(isbuy) {
+  function calculateArrow(price, sma) {
+    if (price > sma) {
+      isbuy = true;
+    } else {
+      isbuy = false;
+    }
+    if (isbuy == true) {
+      buyOrSell = inputCoinString + " IS A BUY";
+    } else if (isbuy == false) {
+      buyOrSell = inputCoinString + " IS A SELL";
+    }
+    console.log(`isbuy is set to ${isbuy}`);
+    setArrowDirection();
+  }
+
+  function setArrowDirection() {
     if (isbuy) {
       rotationDegree = "50deg";
     } else {
       rotationDegree = "-50deg";
     }
   }
-
-  function setIsBuy(somedata) {
-    if (somedata == true) {
-      //  then set isbuy to true
-      isbuy = true;
-      setDegrees(isbuy);
-      buyOrSell = "buy";
-    } else {
-      //  then set isbuy to false
-      isbuy = false;
-      buyOrSell = "sell";
-    }
+  function resetArrow() {
+    rotationDegree = "0deg";
+    buyOrSell = "Choose Crypto Ticker";
   }
 
-  let myInput;
-  let myDiv;
-  onMount(() => {
-    console.dir(myDiv);
-    console.dir(myInput);
-    dataStore.getMovingAverage();
-  });
+  let stats = {};
+
+  function displayStats(statsobj) {
+    stats.open = statsobj.results[0].o;
+    stats.close = statsobj.results[0].c;
+    stats.priceHigh100days = statsobj.results[0].h;
+    stats.priceLow100days = statsobj.results[0].l;
+    stats.vwap = statsobj.results[0].vw;
+    stats.volume = statsobj.results[0].v;
+  }
+
+  async function getMovingAverage(coin) {
+    let result = await fetchDataStore.getMovingAverage(coin);
+    sma100days = result.results.values[0].value;
+    stats.sma100day = sma100days;
+  }
+
+  async function getPrice(coin) {
+    let result = await fetchDataStore.getPrice(coin);
+    closePrice = result.results[0].c;
+    displayStats(result);
+  }
+
+  async function fetchWrapper(input) {
+    await getMovingAverage(input);
+    await getPrice(input);
+    console.log("The current sma is " + sma100days);
+    console.log("The current closeprice is " + closePrice);
+    calculateArrow(closePrice, sma100days);
+  }
 </script>
 
-<FetchDataStore bind:this={dataStore} />
+<FetchDataStore bind:this={fetchDataStore} />
 
 <div id="rootcontainer">
   <div id="divme">
@@ -55,18 +87,26 @@
   <div id="divme">
     <h1>{buyOrSell}</h1>
   </div>
-  <div bind:this={myDiv} id="divme">
+  <div id="divme">
     <input
-      bind:this={myInput}
-      placeholder="stock symbol here ex. AAPL"
+      placeholder="insert coin: ex. BTC"
       oninput="this.value = this.value.toUpperCase();"
-      onchange="this.translate = true"
+      on:input={() => resetArrow()}
+      bind:value={inputCoinString}
       type="text"
       id="userstockinput"
     />
   </div>
+  <div id="statsbox">
+    <h3>Ticker stats</h3>
+    {#each Object.entries(stats) as [type, data]}
+      <h1 id="stat">{type.toLowerCase()} : {data}</h1>
+    {/each}
+  </div>
   <div id="divme">
-    <button id="submitbutton" on:click={() => setIsBuy(true)}>SUBMIT</button>
+    <button id="submitbutton" on:click={() => fetchWrapper(inputCoinString)}
+      >SUBMIT</button
+    >
   </div>
 </div>
 
@@ -75,6 +115,14 @@
     border-style: solid;
     border-radius: 2rem;
     background-color: rgb(102, 102, 102);
+  }
+  #statsbox {
+    width: 30rem;
+    height: 20rem;
+  }
+  #stat {
+    font-size: 1rem;
+    font-weight: 400;
   }
   #divme {
     border-radius: 5rem;
@@ -127,7 +175,6 @@
     left: -10px;
     bottom: 20px;
   }
-
   #userstockinput {
     width: 50%;
     padding: 1rem;
