@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj": {}
+    "C:\\Users\\Coleson\\desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj": {
+    "C:\\Users\\Coleson\\desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
+        "projectUniqueName": "C:\\Users\\Coleson\\desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
         "projectName": "cryptobuysellbackendapi",
-        "projectPath": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
+        "projectPath": "C:\\Users\\Coleson\\desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
         "packagesPath": "C:\\Users\\Coleson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\obj\\",
+        "outputPath": "C:\\Users\\Coleson\\desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Coleson\\AppData\\Roaming\\NuGet\\NuGet.Config"

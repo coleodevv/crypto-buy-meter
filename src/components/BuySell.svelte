@@ -87,6 +87,7 @@
   <div id="divme">
     <h1>{buyOrSell}</h1>
   </div>
+  <h3 id="secretmessage">{inputCoinString} is bellow the 100 day moving average</h3>
   <div id="divme">
     <input
       placeholder="insert coin: ex. BTC"
@@ -98,7 +99,7 @@
     />
   </div>
   <div id="statsbox">
-    <h3>Ticker stats</h3>
+    <h3>Ticker stats:</h3>
     {#each Object.entries(stats) as [type, data]}
       <h1 id="stat">{type.toLowerCase()} : {data}</h1>
     {/each}
@@ -123,6 +124,15 @@
   #stat {
     font-size: 1rem;
     font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #secretmessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
   }
   #divme {
     border-radius: 5rem;

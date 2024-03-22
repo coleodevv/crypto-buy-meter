@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bYaKLFjTvhJpoPTyw1oDIEGoEX2Zw9N2UewBnZXqbfdFQRvHEc04iBu4o1Q4auXczdXbqzQHdGAvCNPxEBknpA==",
+  "dgSpecHash": "GfnQlKvzP0Qf+03U1xzmgUOt3na9PAo1u8MzF43PV5BsEGH46i60wj3fff2G8lwLxMIgn6pGAa44Ns5w9lhUXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Coleson\\Desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
+  "projectFilePath": "C:\\Users\\Coleson\\desktop\\cryptobuysell\\cryptobuysell\\cryptobuysellbackendapi\\cryptobuysellbackendapi\\cryptobuysellbackendapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Coleson\\.nuget\\packages\\alpaca.markets\\7.0.2\\alpaca.markets.7.0.2.nupkg.sha512",
     "C:\\Users\\Coleson\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
