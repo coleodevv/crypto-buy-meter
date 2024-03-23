@@ -85,9 +85,8 @@
     <div id="bottomline"></div>
   </div>
   <div id="divme">
-    <h1>{buyOrSell}</h1>
+    <h1 id="buysellstring">{buyOrSell}</h1>
   </div>
-  <h3 id="secretmessage">{inputCoinString} is bellow the 100 day moving average</h3>
   <div id="divme">
     <input
       placeholder="insert coin: ex. BTC"
@@ -99,7 +98,7 @@
     />
   </div>
   <div id="statsbox">
-    <h3>Ticker stats:</h3>
+    <h3 id="statsbox-title">Ticker stats:</h3>
     {#each Object.entries(stats) as [type, data]}
       <h1 id="stat">{type.toLowerCase()} : {data}</h1>
     {/each}
@@ -113,13 +112,16 @@
 
 <style>
   #rootcontainer {
-    border-style: solid;
-    border-radius: 2rem;
-    background-color: rgb(102, 102, 102);
+    border-radius: 1rem;
+    background-color: #4f5559;
   }
   #statsbox {
     width: 30rem;
-    height: 20rem;
+    background-color: #5b3f0c;
+    color: white;
+  }
+  #statsbox-title {
+    color: white;
   }
   #stat {
     font-size: 1rem;
@@ -141,10 +143,14 @@
     align-items: center;
     padding: 1rem;
   }
+  #buysellstring {
+    color: black;
+    padding: 0.3rem;
+  }
   #roundtop {
     width: 300px;
     height: 150px;
-    background-color: rgb(216, 216, 216);
+    background-color: #2e3234;
     border-radius: 10rem 10rem 0 0;
   }
   #anchorsquare {
@@ -186,12 +192,21 @@
     bottom: 20px;
   }
   #userstockinput {
-    width: 50%;
+    width: 55%;
     padding: 1rem;
+    background-color: #3b3b3b;
+    font-weight: 700;
+    color: white;
   }
   #submitbutton {
-    width: 62%;
-    padding: 1rem;
+    width: 60%;
+    padding: 1rem 1rem;
+    font-weight: 400;
+    background-color: #6b6b6b;
+    color: white;
+  }
+  #buysellstring {
+    color: white;
   }
   #userstockinput {
     font-size: 12px;
