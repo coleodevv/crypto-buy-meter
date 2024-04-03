@@ -21,17 +21,10 @@ try
 
 
 //CORS-----------------------------
-    var specificOrgins = "AppOrigins";
+    var specificOrgins = "BubbleParty";
 
-    builder.Services.AddCors(options =>
-    {
-        options.AddPolicy(name: specificOrgins,
-                          policy =>
-                          {
-                              policy.WithOrigins("http://localhost:5175");
-                          });
-    });
-   //CORS-----------------------------
+    builder.Services.AddCors(corsoptions => corsoptions.AddPolicy(name: specificOrgins, policy => policy.WithOrigins("http://localhost:5173")));
+    //CORS-----------------------------
 
     var app = builder.Build();
 
@@ -48,7 +41,7 @@ try
     app.UseStaticFiles();
     app.UseAuthorization();
 
-    /*use routing is a setup function that routes icnoming uri to the best matching controller*/
+    /*use routing is a setup function that routes incoming uri to the best matching controller*/
     app.UseRouting();
 
     /*allows our local host to acess itself from a different port*/

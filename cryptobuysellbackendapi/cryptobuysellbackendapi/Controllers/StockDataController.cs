@@ -6,6 +6,7 @@ using Environments = Alpaca.Markets.Environments;
 using RestSharp;
 using stockbuysellbackendapi.Passwords;
 using System;
+using System.Web;
 using stockbuysellbackendapi.Extensions;
 
 namespace AccountOwnerServer.Controllers
@@ -16,6 +17,10 @@ namespace AccountOwnerServer.Controllers
     public class StockDataController : ControllerBase
     {
         private static HttpClient _httpClient;
+        public string name { get; set; }
+        public int age { get; set; }
+        public double calculation  { get; set; }
+        public string flavor { get; set; }
 
         public StockDataController()
         {

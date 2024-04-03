@@ -12,6 +12,22 @@ public class SymbolInfoController : ControllerBase
     [Route("symbolinfo/{symbol}")]
     public async Task<string> GetSymbolInfo(string symbol)
     {
+
+        /*this is the same thing just the shorthand is acessing the request obj directly instead of through the context*/
+        /*
+        HttpContext.Request.Headers.TryGetValue();
+        Request.Headers.TryGetValue();
+        */
+
+        var values =  Request.Headers.Values;
+        foreach (var value in values)
+        {
+            Log.Information(value);
+        }
+
+
+
+
         var vault = new KeyVault("kittycat123");
         string keyId = vault.GetPolygonKeyId();
         HttpClient httpClient = new HttpClient();
@@ -23,6 +39,5 @@ public class SymbolInfoController : ControllerBase
         string content = await result.Content.ReadAsStringAsync();
 
         return content;
-
     }
 }

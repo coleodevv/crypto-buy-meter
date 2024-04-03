@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cryptobuysellbackendapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9521dc2ed510253696ddd7c1ca0e31bb5ff2c6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("cryptobuysellbackendapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cryptobuysellbackendapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
